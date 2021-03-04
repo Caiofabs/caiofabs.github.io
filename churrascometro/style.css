@@ -10,6 +10,7 @@ body {
     background: url(./pexels-gonzalo-guzman-3997609.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    font-size: 16px;
 }
 body::before{
     position: absolute;
@@ -25,7 +26,7 @@ body::before{
     top: 20%;
     left: 50%;
     transform: translate(-50%, -20%);
-    width: 400px;
+    width: 800px;
     text-align: center;
     background: #280000d7;
     border-radius: 10px;
@@ -33,26 +34,29 @@ body::before{
 }
 h1{
     color: white;
+    font-size: 3rem;
     margin-top: 5px ;
 }
 input {
-    width: 325px;
+    width: 525px;
+    height: 45px;
     margin: auto;
-    margin-top: 10px ;
+    margin-top: 20px ;
     text-align: center;
     padding: 5px 10px;
     outline: none;
     background: #fff;
     border-radius: 10px;
     border: 1px solid #fff ;
+    font-size: 1.2rem;
 }
 input:focus{
-    width: 350px;
+    width: 600px;
     transition: 250ms ease-in-out;
 }
 button{
-    margin-top: 15px ;
-    padding: 5px 12px;
+    margin-top: 35px ;
+    padding: 20px 50px;
     background: #de3c4b;
     outline: none;
     border: none;
@@ -69,4 +73,5 @@ button:hover{
     margin-top: 20px;
     margin-bottom: 20px;
     color: white;
+    font-size: 1.2rem;
 }
