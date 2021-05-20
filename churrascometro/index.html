@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +8,25 @@
     <title>Churrascometro</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Churrascometro</h1>
-        <input type="number" id="adultos" name="adultos" placeholder="Adultos">
-        <input type="number" id="criancas" name="criancas" placeholder="Crianças">
-        <input type="number" id="duracao" name="duracao" placeholder="Duração (h)">
-       <br>
-        <button onclick="calcular()" >Calcular</button>
-
-        <div id="result">
-
+    <div id="wrapper">
+        <div class="container">
+            <h1>Churrascometro</h1>
+         
+            <div class="inputs">
+                <label for="adultos">Nº de Adultos</label>
+                <input type="number" id="adultos" name="adultos">
+                <label for="crianças">Nº de Crianças</label>
+                <input type="number" id="criancas" name="criancas">
+                <label for="duracao">Duração (h)</label>
+                <input type="number" id="duracao" name="duracao">
+                <br>
+                <button onclick="calcular()">Calcular</button>
+            </div>
         </div>
+       
     </div>
-
+    
+ <div id="result"></div>
 
     <script src="script.js"></script>
 </body>

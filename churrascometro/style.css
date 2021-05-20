@@ -1,77 +1,172 @@
 /* GLOBAL */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root {
+    --red: #4f0000;
+    --gold: #b58d3d;
+    --black: #1f1b19;
+    --smoke: #7f7b74;
+    --rawhide: #f1d29b;
 }
 body {
     height: 100vh;
-    font-family: sans-serif;
-    background: url(./pexels-gonzalo-guzman-3997609.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-size: 16px;
-}
-body::before{
-    position: absolute;
-    content: '';
     width: 100vw;
+    max-height: 100vh;
+    background: url(./images/fabio-alves-unsplash.jpg);
+    background-size: cover;
+    background-position: 1%;
+    background-repeat: no-repeat;
+}
+/* DISPLAY */
+#wrapper {
+    display: flex;
     height: 100vh;
-    background: #e71c22;
-    opacity: .2;
-}
-/* CONTAINER */
-.container{
+    width: 30%;
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    width: 800px;
     text-align: center;
-    background: #280000d7;
-    border-radius: 10px;
-    box-shadow: 0px 0px 25px #69140e;
 }
-h1{
+h1 {
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    color: var(--gold);
+}
+.container {
+    background: var(--black);
     color: white;
-    font-size: 3rem;
-    margin-top: 5px ;
+    width: 100%;
+}
+label{
+    display: block;
+    font-size: .8rem;
+    margin-bottom: 5px;
+    color: var(--smoke);
+}
+.inputs {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
 }
 input {
-    width: 525px;
-    height: 45px;
-    margin: auto;
-    margin-top: 20px ;
+    color: var(--smoke) !important;
+    background: none;
+    width: 55%;
     text-align: center;
-    padding: 5px 10px;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    border-radius: 20px;
     outline: none;
-    background: #fff;
-    border-radius: 10px;
-    border: 1px solid #fff ;
-    font-size: 1.2rem;
-}
-input:focus{
-    width: 600px;
+    border: 1px solid white;
     transition: 250ms ease-in-out;
 }
-button{
-    margin-top: 35px ;
-    padding: 20px 50px;
-    background: #de3c4b;
+input:focus {
+    width: 80%;
+    transition: 250ms ease-in-out;
+}
+/* BUTTON */
+.btn-wrapper {
+    position: relative;
+    display: block;
+    background-color: blue;
+    
+}
+button {
+    color: white;
+    text-align: center;
+    width: 110px;
+    cursor: pointer;
+    padding: 10px 20px;
     outline: none;
-    border: none;
-    border-radius: 2px;
-    color: white;
-    text-transform: uppercase;
+    border: 1px solid white;
+    background: none;
+    border-radius: 20px;
+    transition: 250ms ease-in-out;
 }
-button:hover{
-    color: #000;
+button:hover {
     background: white;
+    color: var(--black);
+    border: 1px solid var(--black);
+    position: relative;
 }
-/* RESULT */
-#result{
-    margin-top: 20px;
-    margin-bottom: 20px;
+/* RESULT  */
+#result {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+.carne, .bebidas, .cerveja {
+    width: 30%;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px 20px 10px 10px;
+    background-color: rgba(116, 22, 33, .7);
+    padding: 22px 0px;
+}
+.carne p, .bebidas p, .cerveja p{
+    font-weight: bold;
     color: white;
-    font-size: 1.2rem;
+    margin-top: 50px;
+}
+.icons {
+    width: 100px;
+    position: relative;
+    top: 0;
+    background: white;
+    border-radius: 50%;
+    border: 3px solid var(--black);
+}
+/* RESPONSIVIDADE */
+@media screen and (max-width:1024px) {
+    body {
+        background-position-x: 100%; 
+        background-size: contain;
+    }
+    #wrapper {
+        width:50%;
+    }
+    .inputs {
+        top: 30%;
+    }
+    #result {
+    display: block;
+    width: 800px;
+    position: absolute;
+    top: 1%;
+    }
+    .carne, .cerveja {
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width:736px) {
+    body {
+        background: none;
+    }
+    #wrapper {
+        width: 100%;
+    }
+    .inputs {
+        top: 40%;
+    }
+    #result {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        background: var(--black);
+    
+    }
+    .carne, .bebidas, .cerveja {
+        margin: auto;
+        margin-bottom: 10px;
+        height: auto;
+        width: 100%;
+    }
 }
